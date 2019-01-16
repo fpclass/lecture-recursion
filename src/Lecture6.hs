@@ -31,6 +31,15 @@ product []     = 1
 product (n:ns) = n * product ns
 
 --------------------------------------------------------------------------------
+-- splitAt
+
+splitAt :: Int -> [a] -> ([a],[a])
+splitAt 0 xs     = ([], xs)
+splitAt n []     = ([], [])
+splitAt n (x:xs) = (x:ys, zs)
+    where (ys,zs) = splitAt (n-1) xs
+
+--------------------------------------------------------------------------------
 -- Demo
 
 and :: [Bool] -> Bool
@@ -53,9 +62,6 @@ reverse = undefined
 
 concat :: [[a]] -> [a]
 concat = undefined
-
-splitAt :: Int -> [a] -> ([a],[a])
-splitAt = undefined
 
 zip :: [a] -> [b] -> [(a,b)]
 zip = undefined
