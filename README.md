@@ -1,2 +1,2 @@
-# lecture6
-Code shown in the sixth CS141 lecture.
+# Lecture: Recursive functions
+Code shown in the CS141 lecture on recursive functions.
