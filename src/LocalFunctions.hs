@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 -- Functional Programming (CS141)                                             --
--- Lecture 6: Recursive functions                                                    --
+-- Lecture 5: Recursive functions                                                    --
 --------------------------------------------------------------------------------
 
 module LocalFunctions where
