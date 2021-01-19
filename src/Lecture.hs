@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
 -- Functional Programming (CS141)                                             --
--- Lecture 5: Recursive functions                                                    --
+-- Lecture: Recursive functions                                                    --
 --------------------------------------------------------------------------------
 
-module Lecture5 where
+module Lecture where
 
 import Prelude hiding ( and, replicate, product, take, length,
                         (++), reverse, concat, splitAt, zip)

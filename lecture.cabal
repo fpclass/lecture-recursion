@@ -1,19 +1,19 @@
-name:                lecture5
+name:                lecture-recursion
 version:             1.1.0.0
-homepage:            https://github.com/fpclass/lecture5#readme
+homepage:            https://github.com/fpclass/lecture-recursion#readme
 author:              Michael B. Gale
 maintainer:          m.gale@warwick.ac.uk
-copyright:           Copyright 2020 Michael B. Gale
+copyright:           Copyright 2021 Michael B. Gale
 build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Lecture5, LocalFunctions
+  exposed-modules:     Lecture, LocalFunctions
   build-depends:       base >= 4.7 && < 5
   default-language:    Haskell2010
 
 source-repository head
   type:     git
-  location: https://github.com/fpclass/lecture5
+  location: https://github.com/fpclass/lecture-recursion
