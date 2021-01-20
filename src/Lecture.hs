@@ -35,7 +35,7 @@ product (n:ns) = n * product ns
 
 splitAt :: Int -> [a] -> ([a],[a])
 splitAt 0 xs     = ([], xs)
-splitAt n []     = ([], [])
+splitAt _ []     = ([], [])
 splitAt n (x:xs) = (x:ys, zs)
     where (ys,zs) = splitAt (n-1) xs
 
@@ -43,27 +43,37 @@ splitAt n (x:xs) = (x:ys, zs)
 -- Demo
 
 and :: [Bool] -> Bool
-and = undefined
+and [] = True
+and (x:xs) = x && and xs
 
 length :: [a] -> Int
-length = undefined
+length [] = 0
+length (_:xs) = 1 + length xs
 
 take :: Int -> [a] -> [a]
-take = undefined
+take 0 _ = []
+take n [] = []
+take n (x:xs) = x : take (n-1) xs
 
 replicate :: Int -> a -> [a]
-replicate = undefined
+replicate 0 _ = []
+replicate n x = x : replicate (n-1) x
 
 (++) :: [a] -> [a] -> [a]
-(++) = undefined
+[] ++ ys = ys
+(x:xs) ++ ys = x : (xs ++ ys)
 
 reverse :: [a] -> [a]
-reverse = undefined
+reverse [] = []
+reverse (x:xs) = reverse xs ++ [x]
 
 concat :: [[a]] -> [a]
-concat = undefined
+concat [] = []
+concat (xs:xss) = xs ++ concat xss
 
 zip :: [a] -> [b] -> [(a,b)]
-zip = undefined
+zip [] _ = []
+zip _ [] = []
+zip (x:xs) (y:ys) = (x,y) : zip xs ys 
 
 --------------------------------------------------------------------------------
